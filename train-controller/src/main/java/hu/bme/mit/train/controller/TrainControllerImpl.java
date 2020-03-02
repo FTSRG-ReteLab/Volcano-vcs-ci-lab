@@ -12,6 +12,7 @@ public class TrainControllerImpl implements TrainController {
 	public void followSpeed() {
 		if (referenceSpeed < 0) {
 			referenceSpeed = 0;
+			System.out.println("Nullára állt a sebesség");
 		} else {
 		    if(referenceSpeed+step > 0) {
                 referenceSpeed += step;
