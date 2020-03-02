@@ -9,7 +9,7 @@ public class TrainControllerImpl implements TrainController {
 	private int speedLimit = 0;
 
 	@Override
-	public void followSpeedketto() {
+	public void followSensor() {
 		if (referenceSpeed < 0) {
 			referenceSpeed = 0;
 			System.out.println("Nullára állt a sebesség");
