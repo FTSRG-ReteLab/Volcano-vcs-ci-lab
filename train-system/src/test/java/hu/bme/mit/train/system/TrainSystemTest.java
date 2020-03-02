@@ -51,9 +51,9 @@ public class TrainSystemTest {
 	}
 	
 	@Test
-	public void TestIfNotNull()
+	public void TestSensorInitialSpeedLimit()
 	{
-		  assertFalse(sensor.equals(null));
+		 Assert.assertEquals(5, sensor.getSpeedLimit());
 	}
 	
 }
