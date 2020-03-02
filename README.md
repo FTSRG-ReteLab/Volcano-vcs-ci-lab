@@ -1,5 +1,10 @@
 # Train Speed Controller
 
+## **Lab team**
+
+- *Krausz Dániel*
+- *Balogh Imre*
+
 This is a sample application for the verification laboratory.
 
 ## Getting started
