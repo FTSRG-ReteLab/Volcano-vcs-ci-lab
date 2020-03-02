@@ -53,7 +53,7 @@ public class TrainSystemTest {
 	@Test
 	public void TestIfNotNull()
 	{
-		  assertFalse(system.equals(null));
+		  assertFalse(sensor.equals(null));
 	}
 	
 }
