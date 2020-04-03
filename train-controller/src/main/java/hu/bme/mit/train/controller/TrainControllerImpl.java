@@ -20,7 +20,7 @@ public class TrainControllerImpl implements TrainController {
                     e.printStackTrace();
                 }
             }
-        }
+        };
     }
 
     @Override
