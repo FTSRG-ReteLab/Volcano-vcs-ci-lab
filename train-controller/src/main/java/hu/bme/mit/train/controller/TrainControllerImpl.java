@@ -1,6 +1,7 @@
 package hu.bme.mit.train.controller;
 
 import hu.bme.mit.train.interfaces.TrainController;
+import java.util.logging.Logger;
 
 public class TrainControllerImpl implements TrainController {
 
@@ -8,19 +9,19 @@ public class TrainControllerImpl implements TrainController {
     private int referenceSpeed = 0;
     private int speedLimit = 0;
     private Thread thread;
+    private System.Logger logger = (System.Logger) Logger.getLogger(TrainControllerImpl.class.getName());
 
     public TrainControllerImpl() {
-        thread = new Thread() {
-            public void run() {
-                thread.start();
-                try {
-                    followSpeed();
-                    thread.sleep(100);
-                } catch (InterruptedException e) {
-                    e.printStackTrace();
-                }
+        thread = new Thread(() -> {
+            thread.start();
+            try {
+                followSpeed();
+                Thread.sleep(100);
+            } catch (InterruptedException e) {
+                logger.log(System.Logger.Level.ERROR, "Thread Interrupted Exception!", e);
+                thread.interrupt();
             }
-        };
+        });
     }
 
     @Override
